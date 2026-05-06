@@ -1,0 +1,71 @@
+{
+  "heartbeat": {
+    "enabled": true,
+    "intervalSeconds": 30,
+    "includeSystemHealth": true,
+    "includeServiceStatus": true
+  },
+
+  "metrics": {
+    "enabled": true,
+    "cpuUsage": true,
+    "memoryUsage": true,
+    "diskUsage": true,
+    "networkIn": true,
+    "networkOut": true,
+    "serviceLatency": true,
+    "queueDepth": true,
+    "exportIntervalSeconds": 60
+  },
+
+  "tracing": {
+    "enabled": true,
+    "samplingRate": 0.15,
+    "includeRequestId": true,
+    "includeActor": true,
+    "includeChainId": true,
+    "traceFile": "logs/traces.log"
+  },
+
+  "healthChecks": {
+    "enabled": true,
+    "checkIntervalSeconds": 20,
+    "services": [
+      "auth",
+      "identity",
+      "caseManagement",
+      "publicSafety",
+      "wellbeing",
+      "analytics",
+      "notifications",
+      "storage",
+      "audit",
+      "emergencyResponse"
+    ]
+  },
+
+  "export": {
+    "federalExportEnabled": true,
+    "format": "json",
+    "batchSize": 250,
+    "exportPath": "exports/telemetry/"
+  },
+
+  "alerting": {
+    "enabled": true,
+    "cpuThresholdPercent": 85,
+    "memoryThresholdPercent": 80,
+    "diskThresholdPercent": 90,
+    "latencyThresholdMs": 500,
+    "notifyRoles": [
+      "Chief Executive Officer",
+      "System Administrator"
+    ]
+  },
+
+  "metadata": {
+    "createdBy": "Pat Tarwater Jr, Chief Executive Officer",
+    "contactEmail": "illuminatedson49@gmail.com",
+    "lastUpdated": "2026-05-06T10:14:00Z"
+  }
+}

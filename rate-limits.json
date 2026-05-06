@@ -1,0 +1,86 @@
+{
+  "global": {
+    "requestsPerMinute": 1200,
+    "burstLimit": 200,
+    "cooldownSeconds": 10
+  },
+
+  "roles": {
+    "Chief Executive Officer": {
+      "requestsPerMinute": 5000,
+      "burstLimit": 1000
+    },
+    "System Administrator": {
+      "requestsPerMinute": 3000,
+      "burstLimit": 600
+    },
+    "minister": {
+      "requestsPerMinute": 1500,
+      "burstLimit": 300
+    },
+    "caseWorker": {
+      "requestsPerMinute": 800,
+      "burstLimit": 150
+    },
+    "citizen": {
+      "requestsPerMinute": 300,
+      "burstLimit": 60
+    }
+  },
+
+  "services": {
+    "auth": {
+      "requestsPerMinute": 200,
+      "burstLimit": 40
+    },
+    "identity": {
+      "requestsPerMinute": 400,
+      "burstLimit": 80
+    },
+    "caseManagement": {
+      "requestsPerMinute": 600,
+      "burstLimit": 120
+    },
+    "publicSafety": {
+      "requestsPerMinute": 700,
+      "burstLimit": 140
+    },
+    "wellbeing": {
+      "requestsPerMinute": 500,
+      "burstLimit": 100
+    },
+    "analytics": {
+      "requestsPerMinute": 900,
+      "burstLimit": 180
+    },
+    "notifications": {
+      "requestsPerMinute": 300,
+      "burstLimit": 60
+    },
+    "storage": {
+      "requestsPerMinute": 1000,
+      "burstLimit": 200
+    },
+    "audit": {
+      "requestsPerMinute": 400,
+      "burstLimit": 80
+    },
+    "emergencyResponse": {
+      "requestsPerMinute": 1500,
+      "burstLimit": 300
+    }
+  },
+
+  "throttlePolicies": {
+    "onLimitExceeded": "temporary-block",
+    "blockDurationSeconds": 30,
+    "logEvents": true,
+    "notifyAdminOnAbuse": true
+  },
+
+  "metadata": {
+    "createdBy": "Pat Tarwater Jr, Chief Executive Officer",
+    "contactEmail": "illuminatedson49@gmail.com",
+    "lastUpdated": "2026-05-06T10:16:00Z"
+  }
+}

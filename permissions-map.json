@@ -1,0 +1,67 @@
+{
+  "permissions": {
+    "all": "Grants full system access across all modules and services.",
+    "policy:invoke": "Create, modify, and execute governance policies.",
+    "policy:review": "Review and comment on governance policies.",
+    "ops:dispatch": "Dispatch field units, tasks, and emergency responses.",
+    "ops:queue": "Queue operational tasks and workflow actions.",
+    "wellbeing:triage": "Perform wellbeing triage and risk scoring.",
+    "ethics:review": "Review ethical compliance and trauma-prevention standards.",
+    "submit:requests": "Submit service requests, cases, or wellbeing forms.",
+    "identity:manage": "Manage identity records and wallet anchoring.",
+    "audit:view": "View audit logs and chain-anchored records.",
+    "audit:export": "Export federal-grade audit bundles.",
+    "analytics:read": "Access analytics dashboards and system metrics.",
+    "storage:write": "Write to storage services and case files.",
+    "notifications:send": "Send system notifications and alerts."
+  },
+
+  "roles": {
+    "governing_officer": [
+      "all"
+    ],
+
+    "executive": [
+      "policy:invoke",
+      "ops:dispatch",
+      "ethics:review",
+      "identity:manage",
+      "audit:view",
+      "analytics:read"
+    ],
+
+    "moderator": [
+      "ops:dispatch",
+      "wellbeing:triage",
+      "ops:queue",
+      "analytics:read"
+    ],
+
+    "member": [
+      "submit:requests"
+    ],
+
+    "citizen": [
+      "submit:requests"
+    ]
+  },
+
+  "system": {
+    "defaultRole": "citizen",
+    "adminOverrideRole": "Chief Executive Officer",
+    "maxDelegationDepth": 2,
+    "allowedDelegationTypes": [
+      "governance_authority",
+      "operational_authority",
+      "documentation_authority",
+      "limited_decision_authority",
+      "wellbeing_authority"
+    ]
+  },
+
+  "metadata": {
+    "createdBy": "Pat Tarwater Jr, Chief Executive Officer",
+    "contactEmail": "illuminatedson49@gmail.com",
+    "lastUpdated": "2026-05-06T10:18:00Z"
+  }
+}

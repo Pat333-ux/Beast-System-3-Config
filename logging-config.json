@@ -1,0 +1,75 @@
+{
+  "logLevel": "info",
+
+  "sinks": {
+    "console": {
+      "enabled": true,
+      "format": "json",
+      "colorize": false
+    },
+
+    "file": {
+      "enabled": true,
+      "path": "logs/beast-system.log",
+      "maxSizeMB": 50,
+      "maxFiles": 10,
+      "compress": true
+    },
+
+    "auditChain": {
+      "enabled": true,
+      "path": "logs/audit-chain.log",
+      "format": "json",
+      "appendOnly": true
+    },
+
+    "federalExport": {
+      "enabled": true,
+      "format": "json",
+      "exportPath": "exports/federal-logs/",
+      "batchSize": 500
+    }
+  },
+
+  "retention": {
+    "generalLogsDays": 90,
+    "auditLogsDays": 365,
+    "errorLogsDays": 180
+  },
+
+  "categories": {
+    "system": "info",
+    "security": "warn",
+    "auth": "info",
+    "identity": "info",
+    "caseManagement": "info",
+    "publicSafety": "info",
+    "wellbeing": "info",
+    "analytics": "debug",
+    "notifications": "info",
+    "storage": "info",
+    "emergencyResponse": "warn"
+  },
+
+  "audit": {
+    "logAuthenticationEvents": true,
+    "logAuthorizationEvents": true,
+    "logDataAccess": true,
+    "logConfigChanges": true,
+    "logSystemErrors": true,
+    "chainAnchoring": true
+  },
+
+  "formatting": {
+    "timestampFormat": "ISO8601",
+    "includeRequestId": true,
+    "includeActor": true,
+    "includeChainId": true
+  },
+
+  "metadata": {
+    "createdBy": "Pat Tarwater Jr, Chief Executive Officer",
+    "contactEmail": "illuminatedson49@gmail.com",
+    "lastUpdated": "2026-05-06T10:12:00Z"
+  }
+}
